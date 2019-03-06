@@ -1,0 +1,714 @@
+// start banner
+
+h1 {
+	padding: 0 0 30px;
+	color: $white;
+
+	@include media(">=desktop") {
+		font-size: 60px;
+		padding-bottom: 42px;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	max-width: $base-max-width;
+	margin: 0 auto;
+	padding: 0 20px 0;
+}
+
+.main-section {
+	background: #3f4049 url(https://i.postimg.cc/C172J9m4/bg-01.png) no-repeat center top;
+	background-size: cover;
+
+	text-align: center;
+
+	min-height: 775px;
+	height: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-title {
+	max-width: 900px;
+	width: 100%;
+	padding:22px 0 10px;
+
+	ul {
+		padding: 0;
+	}
+
+	.icon {
+		display: block;
+		margin-bottom: 20px;
+
+		font-size: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.features {
+		@include media(">=tablet") {
+			display: flex;
+			justify-content: space-around;
+		}
+	}
+
+	.feature {
+		@include media(">=tablet") {
+			margin-right: 20px;
+			a {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.first-feature {
+		color: $green;
+
+		a {
+			color: $green;
+
+			&:hover{
+				color: lighten($green, 20%);
+				@include animate(color)
+			}
+		}
+	}
+
+	.second-feature {
+		color: $purple;
+
+		a {
+			color: $purple;
+
+			&:hover{
+				color: lighten($purple, 20%);
+				@include animate(color)
+			}
+		}
+	}
+
+	.third-feature {
+		color: $yellow;
+
+		@include media(">=tablet") {
+			margin: 0;
+		}
+
+		a {
+			color: $yellow;
+
+			&:hover{
+				color: lighten($yellow, 20%);
+				@include animate(color)
+			}
+		}
+	}
+
+	.feature {
+		padding-bottom: 20px;
+
+		a {
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.btn {
+	border:none;
+	background: $btn-background;
+	padding: $btn-padding;
+	border-radius:30px;
+	color: $button-color;
+	text-transform:uppercase;
+	font-weight:600;
+	transition: background-color 1s linear;
+	outline: none;
+
+	&:hover{
+		background: lighten($btn-background, 10%);
+		@include animate(background color)
+	}
+}
+
+.title-with-btn {
+	padding-bottom: 30px;
+
+	@include media(">=tablet") {
+		padding-bottom: 92px;
+	}
+}
+
+// End Banner
+
+// start section about-us
+
+
+.about-us-section {
+	padding: 60px 0;
+
+	.image-with-text-wrap {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@include media(">=desktop") {
+			min-height: 880px;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.image-wrap {
+			width: 100%;
+			max-width: 535px;
+			height:320px;
+			border: 10px solid $abbey;
+			background-image:
+				linear-gradient(to top, rgba(217,172,165,0.5), rgba(204,204,204,0.3)),
+				url(https://i.postimg.cc/TYRJnpnb/image-01.png);
+			background-repeat: no-repeat;
+			margin-bottom: 20px;
+
+			@include media(">=tablet") {
+				margin-left: 26px;
+				min-width: 535px;
+				width:100%;
+				min-height: 680px;
+			}
+
+			@include media(">=desktop") {
+				margin-bottom: 0;
+			}
+		}
+
+		.border-wrap {
+			position: relative;
+			background: $white-bg;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+			max-width: 630px;
+			width: 100%;
+
+			margin: 0;
+
+			@include media(">=tablet") {
+				h2 {
+					padding-bottom: 45px;
+				}
+			}
+
+			@include media(">=desktop") {
+				margin: 0 0 0 -99px;
+			}
+
+
+			&:after {
+				margin-top: 20px;
+				content:'';
+				display: block;
+				height: 3px;
+				background: linear-gradient(to right,
+				$orange-border 25%,
+				$green-border 25%, $green-border 50%,
+				$purple-border 50%, $purple-border 75%,
+				$yellow-border 75%, $yellow-border 100%);
+			}
+		}
+
+		.title-with-text {
+			padding: 50px 15px;
+
+			@include media(">=tablet") {
+				padding: 67px 70px;
+			}
+
+			.numeral {
+				top: 0;
+			}
+
+			.text-holder {
+				position: relative;
+				z-index: 2;
+
+				p {
+					padding-bottom: 20px;
+
+					&:last-child {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.numeral {
+	position: absolute;
+	left: 0;
+	right: 0;
+
+	font-size: 250px;
+	line-height: .8;
+	font-weight: 700;
+	color: $alto;
+
+	@include media(">=tablet") {
+		font-size: 220px;
+	}
+}
+
+
+// End About
+
+
+// Start our focus
+
+.our-focus-section {
+	background: $alabaster;
+	text-align: center;
+
+	padding-bottom: 30px;
+}
+
+h2 {
+	padding-bottom: 20px;
+
+	@include media(">=tablet") {
+		font-size: 50px;
+	}
+}
+
+.icon-service {
+	max-width: 55px;
+}
+
+.service {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include media(">=tablet") {
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items:center;
+		justify-content:center;
+
+		p {
+			font-size: 15px;
+			line-height: 1.7;
+		}
+	}
+}
+
+.title {
+	position: relative;
+	z-index: 2;
+	padding: 137px 0 76px;
+
+	p {
+		font-size: 18px;
+	}
+}
+
+.service-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+	max-width: 260px;
+	width: 100%;
+	min-height: 200px;
+	background: $white-bg;
+	padding: 20px 30px;
+	margin-bottom: 30px;
+
+	@include media(">=tablet") {
+		min-height: 307px;
+		margin-right: 20px;
+	}
+
+	@include media(">=1200px") {
+		margin-bottom: 0;
+	}
+}
+
+.icon-service {
+	padding-top: 6px;
+	padding-bottom: 22px;
+	margin: 0 auto;
+}
+
+.title-service {
+	font-size: 20px;
+	font-weight: 500;
+	padding-bottom: 24px;
+}
+
+.first-service-wrap {
+	border-bottom: 3px solid $orange;
+}
+
+.second-service-wrap {
+	border-bottom: 3px solid $green;
+}
+
+.third-service-wrap {
+	border-bottom: 3px solid $purple;
+}
+
+.fourth-service-wrap {
+	border-bottom: 3px solid $yellow;
+}
+
+// End our focus
+
+// start portfolio
+
+.portfolio-section {
+	background: $alabaster;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.portfolio-list {
+	padding: 0;
+
+	li {
+		display: inline-block;
+	}
+}
+
+.portfolio-item {
+	max-width: 360px;
+	width: 100%;
+	padding-bottom: 20px;
+	padding-right: 18px;
+}
+
+.item-wrapper {
+	display: block;
+	border:5px solid rgba(255,255,255,0.1);
+	position: relative;
+	overflow: hidden;
+
+	> img {
+		width: 100%;
+	}
+
+	> a {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: transparent
+	}
+
+	&:hover {
+		border:5px solid $white;
+		@include animate(border)
+		transition: all 0.3s ease-in-out;
+
+		.hover-icon {
+			bottom: 50%
+		}
+
+		.portfolio-hover {
+			bottom: 0%
+		}
+	}
+}
+
+.portfolio-hover {
+
+	.icon {
+		max-width: 61px;
+		width: 100%;
+		margin:0 auto;
+	}
+
+	.project-wrap {
+		background: $white-bg;
+		padding:10px 15px 10px;
+	}
+}
+
+.hover-icon {
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.portfolio-hover {
+	transition: 0.3s all 0.3s ease-in-out;
+	color: #000;
+	position: absolute;
+	bottom: -50%;
+	background: #fff;
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+
+	.project-wrap {
+		padding: 20px 0;
+	}
+
+	.colored {
+		height: 3px;
+		background: linear-gradient(to right,
+				$orange-border 25%,
+				$green-border 25%, $green-border 50%,
+				$purple-border 50%, $purple-border 75%,
+				$yellow-border 75%, $yellow-border 100%);
+	}
+}
+
+/*start explore-our-awesomeness-section*/
+
+.explore-our-awesomeness-section {
+	padding: 50px 0;
+
+	.media {
+		max-width: 600px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+/*end explore-our-awesomeness-section*/
+
+
+/*start pricing-table-section*/
+
+.pricing-table-section {
+	padding: 50px 0;
+	text-align: center;
+	background: $alabaster;
+}
+
+.js-tab-hidden {
+	display: block !important;
+	left: -9999px !important;
+	position: absolute !important;
+	top: -9999px !important;
+}
+
+.fade-tabset {
+	.tab-wrapper {
+		opacity: 0;
+		transition: opacity 2s ease;
+	}
+
+	.active {
+		opacity: 1;
+	}
+}
+
+
+.tab-wrapper {
+	margin: 0 auto;
+	padding: 50px 15px;
+	width: 100%;
+	max-width: 360px;
+	background: $white-bg;
+	border-top: 3px solid $green-border;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+	.text-holder {
+		color: $dove-gray;
+		padding-bottom: 30px;
+
+		p {
+			padding-bottom: 10px;
+		}
+
+		b {
+			color: $gray;
+		}
+	}
+}
+
+.tabset {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+
+	a {
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+
+.tabset-list {
+	padding-right: 20px;
+}
+
+.tabset-list-professional {
+	padding-right: 0;
+}
+
+.tabset-list-starter {
+	a {
+		color: $green;
+
+		&:hover{
+			color: lighten($green, 10%);
+			@include animate(color)
+		}
+	}
+}
+
+.tabset-list-ultimate {
+	a {
+		color: $orange;
+
+		&:hover{
+			color: lighten($orange, 10%);
+			@include animate(color)
+		}
+	}
+}
+
+.tabset-list-professional {
+	a {
+		color: $purple;
+
+		&:hover{
+			color: lighten($purple, 10%);
+			@include animate(color)
+		}
+	}
+}
+
+.price-wrapper {
+	width: 100px;
+	height: 100px;
+	background: radial-gradient(closest-side,
+		$green-border 90%,
+		$white 90%, $white 95%,
+		$green-border 95%, $green-border 100%,
+	);
+	border-radius: 50%;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto 30px;
+	color: $white;
+
+	.price {
+		font-size: 25px;
+	}
+
+	p {
+		font-size: 13px;
+	}
+}
+
+.btn-green {
+	color: $green;
+	background: $white-bg;
+	border: 3px solid $green-border;
+
+	&:hover {
+		background: $green-border;
+		color: $white;
+	}
+}
+
+.tab-ultimate {
+	border-top: 3px solid $orange-border;
+
+	.price-wrapper {
+		background: radial-gradient(closest-side,
+		$orange-border 90%,
+		$white 90%, $white 95%,
+		$orange-border 95%, $orange-border 100%,
+	);
+	}
+}
+
+
+.btn-orange {
+	color: $orange;
+	background: $white-bg;
+	border: 3px solid $orange-border;
+
+	&:hover {
+		background: $orange-border;
+		color: $white;
+	}
+}
+
+.tab-professional {
+	border-top: 3px solid $purple-border;
+
+	.price-wrapper {
+		background: radial-gradient(closest-side,
+		$purple-border 90%,
+		$white 90%, $white 95%,
+		$purple-border 95%, $purple-border 100%,
+	);
+	}
+}
+
+.btn-purple {
+	color: $purple;
+	background: $white-bg;
+	border: 3px solid $purple-border;
+
+	&:hover {
+		background: $purple-border;
+		color: $white;
+	}
+}
+
+/*end pricing-table-section*/
+
+
+/* start custom-forms-section*/
+
+.custom-forms-section {
+	padding: 50px 0;
+}
+
+/* end custom-forms-section*/
+
+// start get-in-touch-section
+
+.get-in-touch-section {
+	background: $abbey;
+	text-align:center;
+	padding: 50px 0;
+}
+
+.form {
+	max-width:750px;
+	width:100%;
+	margin:0 auto;
+}
+
+
+// end get-in-touch-section
+
