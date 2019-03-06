@@ -1,0 +1,97 @@
+.footer {
+	background: $gray-bg;
+	padding:57px 0;
+}
+
+.social-icon {
+	max-width: 30px;
+	width: 100%;
+	margin-right:15px;
+
+	&:last-child {
+		margin-right:0;
+	}
+}
+
+
+.footer-wrap {
+	text-align:center;
+	display: flex;
+	flex-direction: column;
+
+	@include media(">desktop") {
+		display: flex;
+		flex-direction: row;
+		justify-content:space-around;
+	}
+
+	.logo {
+		align-self: center;
+		max-width:138px;
+		width:100%;
+		padding-bottom:30px;
+		margin: 0;
+
+		@include media(">desktop") {
+			padding-bottom:0;
+			margin-left:23px;
+		}
+	}
+
+	span {
+		display:block;
+		font-size: 18px;
+		font-weight: 500;
+		color: $green;
+		padding-bottom:27px;
+	}
+}
+
+.address {
+	margin:0 auto;
+	max-width:210px;
+	width:100%;
+	padding-bottom:20px;
+
+	@include media(">desktop") {
+		padding-bottom:0;
+		margin:0 0 0 16px;
+	}
+
+	address{
+		font-size:16px;
+		font-style:normal;
+		color: $swiss-coffee;
+		letter-spacing:.02em;
+	}
+}
+
+.second-address {
+	span {
+		color: $purple;
+	}
+}
+
+.social-icons {
+	margin:0 auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.follow-us {
+	span {
+		text-align:center;
+		color: $yellow;
+		padding-bottom:32px;
+	}
+}
+
+.colored {
+	height: 3px;
+	background: linear-gradient(to right,
+			$orange-border 25%,
+			$green-border 25%, $green-border 50%,
+			$purple-border 50%, $purple-border 75%,
+			$yellow-border 75%, $yellow-border 100%);
+}

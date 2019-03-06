@@ -10,7 +10,7 @@
   background: #fff;
   border: 2px solid $green;
   border-radius:5px;
-  margin: 0 3px 0 0;
+  margin: 0 3px 2px 0;
   height: 16px;
   width: 16px;
   -webkit-transition: border-color .2s ease;
@@ -75,7 +75,7 @@
   padding: 0 8px;
   font-size: 13px;
   line-height: 28px;
-  height: 28px;
+  height: 50px;
   width: 125px;
 }
 
@@ -87,7 +87,8 @@
   margin: 0 0 0 -1px;
   padding: 0 10px;
   line-height: 28px;
-  height: 28px;
+  height: 50px;
+  background: $green;
 }
 
 /* select */
@@ -100,6 +101,12 @@
   background: #fff;
   margin: 0 0 12px;
   min-width: 150px;
+  width:100%;
+  min-height:50px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: $green;
+  text-align: left;
 }
 
 .jcf-select select {
@@ -133,7 +140,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    content: "\ea44";
+    content: "\ea43";
     font-family: 'icomoon' !important;
     font-size: 15px;
     color: $white;
@@ -206,7 +213,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   cursor: default;
   display: block;
   padding: 5px 9px;
-  color: #656565;
+  color: $green;
   min-height: 14px;
   height: 1%;
 }
@@ -305,11 +312,11 @@ select {
   border:0;
   outline:0;
   background: $white;
+  color: $green;
   border-radius:5px;
 }
 
 input{
-  max-width:360px;
   width:100%;
   min-height:50px;
   padding: 10px;
@@ -322,41 +329,40 @@ textarea {
   margin-bottom: 20px;
 
   @include media("<tablet") {
-     max-width:360px;
+     max-width:380px;
      width:100%;
   }
 }
 
 .iput-holder {
   display:flex;
-  justify-content:space-between;
-  flex-direction: column;
 
-  @include media(">tablet") {
-    flex-direction: row;
+  justify-content:center;
+
+  @include media("<=tablet") {
+    flex-wrap: wrap;
   }
 
   .left-form {
-    margin-right: 0;
+    padding-right: 0;
 
     @include media(">=tablet") {
-      margin-right: 20px;
+      padding-right:20px;
     }
   }
 }
 
-.drop {
-  padding-bottom:20px;
+.left-form,
+.right-form {
+  max-width: 380px;
+
+  @include media(">=tablet") {
+    max-width:360px;
+  }
 }
 
 .checkbox {
   padding-bottom:30px;
-  .title {
-    display:block;
-    font-size: 20px;
-    line-height:1.8;
-    padding:0 0 20px;
-  }
 }
 
 .check-holder {
@@ -364,4 +370,10 @@ textarea {
   background: $white;
   border-radius:5px;
   padding: 10px;
+
+  @include media("<tablet") {
+    margin:0 auto;
+    max-width:380px;
+    width:100%;
+  }
 }
